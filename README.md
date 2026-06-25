@@ -143,7 +143,21 @@ Deployed at: **https://ticketservice-kz87.onrender.com**
 Public health check: **https://ticketservice-kz87.onrender.com/health**
 
 ##Some of the screenshots photo
-<img width="1366" height="768" alt="Screenshot 2026-06-25 202501" src="https://github.com/user-attachments/assets/225c2236-f7d8-4cf9-8874-063a3240a07c" />
+<img width="130" height="100" alt="Screenshot 2026-06-25 202501" src="https://github.com/user-attachments/assets/225c2236-f7d8-4cf9-8874-063a3240a07c" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221007" src="https://github.com/user-attachments/assets/bea031f0-ef1a-40b6-856f-d65fee9a85aa" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221025" src="https://github.com/user-attachments/assets/9ee6c6fd-8501-4810-8314-90f900f1d642" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221223" src="https://github.com/user-attachments/assets/93ebb30d-84f7-4ad2-a7b6-c59e1fc3702c" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221344" src="https://github.com/user-attachments/assets/408fac4a-3010-48fd-b568-144e43b6298e" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221528" src="https://github.com/user-attachments/assets/b563e30a-545d-4b3d-8793-6ff3c2ee9a5b" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221548" src="https://github.com/user-attachments/assets/f4429df7-222d-4250-af86-960d457d8623" />
+<img  width="130" height="100" alt="Screenshot 2026-06-25 221615" src="https://github.com/user-attachments/assets/603f6f2b-8f44-4455-a782-7ef98f105022" />
+
+
+
+
+
+
+
 
 
 
