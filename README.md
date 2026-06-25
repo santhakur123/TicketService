@@ -139,8 +139,8 @@ deployment — the app logs a warning if it falls back to the default.
 
 ## Deployment
 
-Deployed at: **`https://ticketservice-kz87.onrender.com`**
-Public health check: **`https://ticketservice-kz87.onrender.com/health`**
+Deployed at: **https://ticketservice-kz87.onrender.com**
+Public health check: **https://ticketservice-kz87.onrender.com/health**
 
 ##Some of the screenshots photo
 <img width="1366" height="768" alt="Screenshot 2026-06-25 202501" src="https://github.com/user-attachments/assets/225c2236-f7d8-4cf9-8874-063a3240a07c" />
