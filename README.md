@@ -5,7 +5,7 @@ their own tickets, and update the status of their own tickets.
 
 ## Tech Stack & Design Choices
 
-- **Language:** Go  (uses the standard library's enhanced `net/http.ServeMux`
+- **Language:** Go  (
   for method + path-parameter routing, e.g. `GET /tickets/{id}`).
 - **Storage:** In-memory (a mutex-guarded map)
   
@@ -14,8 +14,7 @@ their own tickets, and update the status of their own tickets.
   than a third-party JWT package, so the project has **zero external
   dependencies** — no `go.sum`, nothing to fetch from the internet to build.
 - **Passwords:** Never stored in plaintext. Stored as  where the hash
-  is SHA-256 run for 100,000 rounds over `salt + password` (a simple stdlib-only
-  PBKDF-style scheme). Verification uses a constant-time comparison.
+  is  rounds over `salt + password`. Verification uses a constant-time comparison.
 
 No third-party Go modules are used at all, so `go build` works completely
 offline with just the Go toolchain.
@@ -29,7 +28,7 @@ offline with just the Go toolchain.
 ├── store.go        # thread-safe in-memory data store
 ├── models.go      # User / Ticket structs + status transition rules
 ├── jwt.go         # minimal HS256 JWT encode/decode
-├── password.go    # salted, iterated SHA-256 password hashing
+├── password.go    # salted, iterated  password hashing
 ├── id.go          # random hex ID generator + sentinel errors
 ├── context.go     # request-context helpers for the authenticated user ID
 ├── Dockerfile
@@ -119,7 +118,7 @@ curl http://localhost:8080/health
 
 ```bash
 docker build -t ticket-system .
-docker run -p 8080:8080 -e JWT_SECRET=some-long-random-secret ticket-system
+docker run -p 8080:8080 -e JWT_SECRET=mysecretkey ticket-system
 curl http://localhost:8080/health
 ```
 
@@ -134,8 +133,7 @@ See `.env.example`.
 
 
 
-\* Not required to run, but **must** be set to a real secret for any
-deployment — the app logs a warning if it falls back to the default.
+
 
 ## Deployment
 
@@ -143,14 +141,14 @@ Deployed at: **https://ticketservice-kz87.onrender.com**
 Public health check: **https://ticketservice-kz87.onrender.com/health**
 
 ##Some of the screenshots photo
-<img width="130" height="100" alt="Screenshot 2026-06-25 202501" src="https://github.com/user-attachments/assets/225c2236-f7d8-4cf9-8874-063a3240a07c" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221007" src="https://github.com/user-attachments/assets/bea031f0-ef1a-40b6-856f-d65fee9a85aa" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221025" src="https://github.com/user-attachments/assets/9ee6c6fd-8501-4810-8314-90f900f1d642" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221223" src="https://github.com/user-attachments/assets/93ebb30d-84f7-4ad2-a7b6-c59e1fc3702c" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221344" src="https://github.com/user-attachments/assets/408fac4a-3010-48fd-b568-144e43b6298e" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221528" src="https://github.com/user-attachments/assets/b563e30a-545d-4b3d-8793-6ff3c2ee9a5b" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221548" src="https://github.com/user-attachments/assets/f4429df7-222d-4250-af86-960d457d8623" />
-<img  width="130" height="100" alt="Screenshot 2026-06-25 221615" src="https://github.com/user-attachments/assets/603f6f2b-8f44-4455-a782-7ef98f105022" />
+<img width="200" height="100" alt="Screenshot 2026-06-25 202501" src="https://github.com/user-attachments/assets/225c2236-f7d8-4cf9-8874-063a3240a07c" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221007" src="https://github.com/user-attachments/assets/bea031f0-ef1a-40b6-856f-d65fee9a85aa" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221025" src="https://github.com/user-attachments/assets/9ee6c6fd-8501-4810-8314-90f900f1d642" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221223" src="https://github.com/user-attachments/assets/93ebb30d-84f7-4ad2-a7b6-c59e1fc3702c" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221344" src="https://github.com/user-attachments/assets/408fac4a-3010-48fd-b568-144e43b6298e" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221528" src="https://github.com/user-attachments/assets/b563e30a-545d-4b3d-8793-6ff3c2ee9a5b" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221548" src="https://github.com/user-attachments/assets/f4429df7-222d-4250-af86-960d457d8623" />
+<img  width="200" height="100" alt="Screenshot 2026-06-25 221615" src="https://github.com/user-attachments/assets/603f6f2b-8f44-4455-a782-7ef98f105022" />
 
 
 
